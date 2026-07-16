@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="fireworks"></canvas>
+  <div class="sparkle-bg"></div>
+
+  <header class="hero">
+    <div class="balloons" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">Birthday Magic</div>
+      <button id="musicBtn" class="music-btn" type="button">♫ Bật nhạc</button>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Một ngày thật đặc biệt dành cho Hồng Vân</p>
+      <h1>Chúc Mừng Sinh Nhật!</h1>
+      <p id="typingText" class="typing"></p>
+      <div class="hero-actions">
+        <a href="#gallery" class="btn primary">Xem 5 kỷ niệm</a>
+        <button id="wishBtn" class="btn ghost" type="button">Mở lời chúc 🎁</button>
+      </div>
+    </section>
+
+    <div class="cake-card" aria-label="birthday cake">
+      <div class="cake">
+        <div class="candle"><i></i></div>
+        <div class="layer top"></div>
+        <div class="layer middle"></div>
+        <div class="layer bottom"></div>
+        <div class="plate"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro reveal">
+      <p class="section-kicker">For you</p>
+      <h2>Hôm nay là ngày chị Vân tỏa sáng nhất</h2>
+      <p>
+        Chúc H.Vân tuổi mới luôn rực rỡ như pháo hoa, ngọt ngào như chiếc bánh kem,
+        và hạnh phúc trong từng khoảnh khắc nhỏ bé nhất.
+      </p>
+    </section>
+
+    <section id="gallery" class="section gallery reveal">
+      <p class="section-kicker">Memories</p>
+      <h2>5 bức ảnh xịn nhất;))</h2>
+      <p class="hint">Nhiều ảnh quớ nên lấy 5 tấm hoi</p>
+
+      <div class="slider">
+        <button class="slide-btn prev" type="button" aria-label="Ảnh trước">‹</button>
+        <div class="photo-frame">
+          <img id="mainPhoto" src="img/van1.jpg" alt="Ảnh sinh nhật 1" />
+          <div class="photo-caption">
+            <span id="photoNumber">01 / 05</span>
+            <h3 id="photoTitle">Khoảnh khắc đầu tiên</h3>
+          </div>
+        </div>
+        <button class="slide-btn next" type="button" aria-label="Ảnh sau">›</button>
+      </div>
+
+      <div class="thumbs" id="thumbs"></div>
+    </section>
+
+    <section class="section cards reveal">
+      <p class="section-kicker">Wish list</p>
+      <h2>Tuổi mới phải có đủ combo này nhó</h2>
+      <div class="card-grid">
+        <article class="wish-card">
+          <span>💖</span>
+          <h3>Thật nhiều yêu thương</h3>
+          <p>Luôn có người lắng nghe, quan tâm và ở cạnh H.Vân nè.</p>
+        </article>
+        <article class="wish-card">
+          <span>🌟</span>
+          <h3>Rực rỡ hơn mỗi ngày</h3>
+          <p>Làm điều mình thích, sống đúng màu sắc của mình.</p>
+        </article>
+        <article class="wish-card">
+          <span>🍀</span>
+          <h3>May mắn ngập tràn</h3>
+          <p>Việc gì cũng thuận lợi, gặp toàn điều dễ thương.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section final reveal">
+      <h2>Happy Birthday ✨</h2>
+      <p>
+        Mong H.Vân bước sang tuổi mới với nụ cười thật tươi, trái tim thật ấm,
+        và một bầu trời ước mơ đang chờ được chạm tới. Mãi iuuu💖
+      </p>
+      <button id="confettiBtn" class="btn primary" type="button">Bắn confetti lần nữa 🎉</button>
+    </section>
+  </main>
+
+  <div id="wishModal" class="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button id="closeModal" class="close" type="button" aria-label="Đóng">×</button>
+      <div class="gift">🎂</div>
+      <h2>Gửi bạn một lời chúc thật xịn</h2>
+      <p>
+        Chúc H.Vân sinh nhật vui vẻ, tuổi mới luôn xinh đẹp, tự tin, mạnh mẽ,
+        gặp thật nhiều may mắn và có những ngày tháng đáng nhớ nhất.
+      </p>
+      <p class="signature">With love, from someone who cares 💌</p>
+    </div>
+  </div>
+
+  <audio id="birthdayAudio" loop>
+    <source src="audio/nhacsinhnhat.mp3">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
